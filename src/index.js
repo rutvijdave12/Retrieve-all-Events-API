@@ -9,10 +9,12 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Connect to your MongoDB database
-mongoose.connect(mongoURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(config.dbConnectionString, {
+    ssl: true,
+    tlsCertificateKeyFile: config.dbSslCertPath,
+    authMechanism: 'MONGODB-X509',
+    authSource: '$external'
+})
 
 // Routes
 app.get('/api/events', async (req, res) => {
