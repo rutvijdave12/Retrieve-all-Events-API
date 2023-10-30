@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const eventController = require('./routes/retrieveAllEvents.controller.js');
-const mongoURL = 'mongodb://localhost/dummy-database-name';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
