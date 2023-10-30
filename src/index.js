@@ -3,10 +3,6 @@ const mongoose = require('mongoose');
 const eventController = require('./routes/retrieveAllEvents.controller.js');
 const mongoURL = 'mongodb://localhost/dummy-database-name';
 
-const express = require('express');
-const mongoose = require('mongoose');
-const eventController = require('./controllers/eventController');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -29,6 +25,5 @@ app.get('/api/events', async (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+module.exports.handler = serverless(app);
+
