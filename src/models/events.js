@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const { string } = require('joi');
-=======
->>>>>>> 3e66358d536d7a5d5be45e91437cb4e2bac63b48
 const mongoose = require('mongoose');
 
 const eventSchema = new mongoose.Schema({
@@ -15,11 +11,7 @@ const eventSchema = new mongoose.Schema({
     required: false,
   },
   image: {
-<<<<<<< HEAD
     type: String,
-=======
-    type: Buffer,
->>>>>>> 3e66358d536d7a5d5be45e91437cb4e2bac63b48
     required: false,
   },
   date: {

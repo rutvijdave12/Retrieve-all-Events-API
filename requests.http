@@ -1,0 +1,2 @@
+GET http://localhost:6003/api/v1/events
+Content-Type: application/json
