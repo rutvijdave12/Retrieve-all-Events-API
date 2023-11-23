@@ -1,6 +1,4 @@
 const path = require('path');
-const fs = require('fs')
-const forge = require('node-forge');
 
 let envFilePath = process.env.NODE_ENV;
 console.log(envFilePath)
