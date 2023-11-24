@@ -10,9 +10,25 @@ module.exports = async (req, res) => {
             statusCode: 0,
             timestamp: Date.now(),
             requestId: req.body.requestId || v4(),
-            data: {
-                events,
-            },
+            //using map to return only the specified fields
+            events: events.map((event) => {
+                return {
+                    _id: event._id,
+                    title: event.title,
+                    description: event.description,
+                    image: event.image,
+                    date: event.date,
+                    time: event.time,
+                    maxSeats: event.maxSeats,
+                    bookedSeats: event.bookedSeats,
+                    location: event.location,
+                    organizer: event.organizer,
+                    attendees: event.attendees,
+                    price: event.price,
+                    createdAt: event.createdAt,
+                    updatedAt: event.updatedAt,
+                };
+            }
             info: {
                 code: errors['000'].code,
                 message: errors['000'].message,
