@@ -1,4 +1,6 @@
 const Event = require('../models/events');
+const { v4 } = require('uuid');
+
 const errors = require('../../errors/errors');
 
 module.exports = async (req, res) => {
