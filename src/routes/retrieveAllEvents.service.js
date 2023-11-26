@@ -26,6 +26,7 @@ module.exports = async (req, res) => {
                     organizer: event.organizer,
                     attendees: event.attendees,
                     price: event.price,
+                    tags: event.tags,
                     createdAt: event.createdAt,
                     updatedAt: event.updatedAt,
                 };
